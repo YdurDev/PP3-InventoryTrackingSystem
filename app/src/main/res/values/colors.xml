@@ -4,6 +4,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="background_blue">#5796C7</color>
+
+    <color name="background_lightgrey">#d2d6d3</color>
     <color name="background_grey">#a7aba8</color>
 
 </resources>

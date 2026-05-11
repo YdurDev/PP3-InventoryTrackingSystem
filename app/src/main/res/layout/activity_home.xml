@@ -7,13 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
     android:background="@color/background_grey">
-
+                <!--                  BANNER-             -->
     <LinearLayout
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/background_blue"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:id="@+id/bannerText"
@@ -24,6 +27,9 @@
             android:textColor="@color/white" />
     </LinearLayout>
 
+
+
+                                        <!--    NAV     -->
     <LinearLayout
         android:id="@+id/nav"
         android:layout_width="wrap_content"
@@ -56,30 +62,160 @@
             android:text="Button" />
     </LinearLayout>
 
-    <LinearLayout
+
+
+                                            <!--STAT CARDS-->
+    <GridLayout
         android:id="@+id/statCardLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="10dp"
         android:orientation="vertical"
+        android:background="@color/background_lightgrey"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:padding="10dp"
         app:layout_constraintStart_toEndOf="@id/nav"
         app:layout_constraintTop_toBottomOf="@id/banner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/recentActivityRecycler"
         app:layout_constraintVertical_weight="1"
-        android:layout_margin="10dp">
+        >
 
+
+        <!--TOTAL CARD-->
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-    </LinearLayout>
+            android:id="@+id/statCard_total"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            >
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewTotalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/statCardLabel_total" />
+
+                <TextView
+                    android:id="@+id/textViewTotalValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!--LOW CARD-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/statCard_low"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewLowLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/statCardLabel_low" />
+
+                <TextView
+                    android:id="@+id/textViewLowValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!--NO STOCK CARD-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/statCard_no"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewNoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/statCardLabel_no" />
+
+                <TextView
+                    android:id="@+id/textViewNoValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!--UNIT COUNT CARD-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/statCard_units"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewUnitsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/statCardLabel_units" />
+
+                <TextView
+                    android:id="@+id/textViewUnitsValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+
+
+                                            <!--RECENT ACTIVITY RECYCLER -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recentActivityRecycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
-        android:background="@color/black"
+        android:background="@color/background_lightgrey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/nav"
