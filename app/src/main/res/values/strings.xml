@@ -3,4 +3,6 @@
 
     <string name="welcome_msg">Start tracking your Assets!</string>
     <string name="welcome_btn">Begin!</string>
+
+    <string name="banner_text">Hello, Jane.                 Welcome to the ITS</string>
 </resources>
