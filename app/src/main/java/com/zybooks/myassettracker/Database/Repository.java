@@ -19,7 +19,12 @@ public class Repository {
     public ProductDAO mProductDAO;
     public List<Product> mProducts;
 
+
+    //-------------------------Card Member Variables----------------------------------------
     public int mProductCount;
+    public int mNoStockCount;
+    public int mLowStockCount;
+    public int mUnitStockCount;
 
     //--------------------------Implementing Thread-Pool-----------------------------------
 
@@ -70,6 +75,42 @@ public class Repository {
             throw new RuntimeException(e);
         }
         return mProductCount;
+    }
+
+    public int getNoStockCount(){
+        databaseExecutor.execute(()->{
+            mNoStockCount = mProductDAO.getNoStockCount();
+        });
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }
+        return mNoStockCount;
+    }
+
+    public int getmLowStockCount(){
+        databaseExecutor.execute(()->{
+            mLowStockCount = mProductDAO.getLowStockCount();
+        });
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }
+        return mLowStockCount;
+    }
+
+    public int getmUnitStockCount(){
+        databaseExecutor.execute(()->{
+            mUnitStockCount = mProductDAO.getUnitStockCount();
+        });
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }
+        return mUnitStockCount;
     }
 
     public void update(Product product){

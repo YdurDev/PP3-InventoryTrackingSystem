@@ -1,9 +1,11 @@
 package com.zybooks.myassettracker.UI;
 
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Button startBtn = findViewById(R.id.startBtn);
         Repository repository = new Repository(getApplication());
 
+
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 repository.insert(product);
                 Product product1 = new Product(0, "Dell Inspiron 15", "799.99", 25, "NJ");
                 repository.insert(product1);
-                Product product2 = new Product(0, "HP Pavilion Desktop", "649.50", 18, "PA");
+                Product product2 = new Product(0, "HP Pavilion Desktop", "649.50", 0, "PA");
                 repository.insert(product2);
                 Product product3 = new Product(0, "Lenovo ThinkPad X1", "1299.00", 12, "PA");
                 repository.insert(product3);
@@ -46,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 repository.insert(product6);
                 Product product7 = new Product(0, "MSI Stealth Laptop", "1599.49", 9, "NY");
                 repository.insert(product7);
-                Product product8 = new Product(0, "Samsung Odyssey Monitor", "349.99", 20, "NY");
+                Product product8 = new Product(0, "Samsung Odyssey Monitor", "349.99", 0, "NY");
                 repository.insert(product8);
                 Product product9 = new Product(0, "Corsair Gaming Keyboard", "129.95", 40, "PA");
                 repository.insert(product9);

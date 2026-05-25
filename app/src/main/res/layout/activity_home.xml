@@ -98,14 +98,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewTotalLabel"
+                    android:id="@+id/totalLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="@string/statCardLabel_total" />
 
                 <TextView
-                    android:id="@+id/textViewTotalValue"
+                    android:id="@+id/totalValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -129,14 +128,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewLowLabel"
+                    android:id="@+id/lowLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="@string/statCardLabel_low" />
 
                 <TextView
-                    android:id="@+id/textViewLowValue"
+                    android:id="@+id/lowValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -160,14 +158,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewNoLabel"
+                    android:id="@+id/noLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="@string/statCardLabel_no" />
 
                 <TextView
-                    android:id="@+id/textViewNoValue"
+                    android:id="@+id/noValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -191,14 +188,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textViewUnitsLabel"
+                    android:id="@+id/unitLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="@string/statCardLabel_units" />
 
                 <TextView
-                    android:id="@+id/textViewUnitsValue"
+                    android:id="@+id/unitValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

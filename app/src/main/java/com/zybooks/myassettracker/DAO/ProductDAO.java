@@ -23,6 +23,15 @@ public interface ProductDAO {
     @Query("SELECT COUNT(*) FROM PRODUCTS")
     int getProductCount();
 
+    @Query("SELECT COUNT(*) FROM PRODUCTS WHERE quantity = 0")
+    int getNoStockCount();
+
+    @Query("SELECT COUNT(*) FROM PRODUCTS WHERE quantity < 10")
+    int getLowStockCount();
+
+    @Query("SELECT SUM(quantity) FROM products")
+    int getUnitStockCount();
+
     @Query("SELECT * FROM PRODUCTS WHERE :name = name")
     Product getProduct(String name);
 
