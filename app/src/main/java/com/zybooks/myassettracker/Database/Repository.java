@@ -19,6 +19,8 @@ public class Repository {
     public ProductDAO mProductDAO;
     public List<Product> mProducts;
 
+    public int mProductCount;
+
     //--------------------------Implementing Thread-Pool-----------------------------------
 
     public static int THREAD_POOL_SIZE = 5;
@@ -56,6 +58,18 @@ public class Repository {
             throw new RuntimeException(e);
         }
         return mProducts;
+    }
+
+    public int getProductCount(){
+        databaseExecutor.execute(()->{
+            mProductCount = mProductDAO.getProductCount();
+        });
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }
+        return mProductCount;
     }
 
     public void update(Product product){

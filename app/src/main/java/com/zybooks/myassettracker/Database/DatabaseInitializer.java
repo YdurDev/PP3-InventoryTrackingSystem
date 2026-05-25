@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import com.zybooks.myassettracker.DAO.ProductDAO;
 import com.zybooks.myassettracker.Entities.Product;
 
-@Database(entities = Product.class,version = 1,exportSchema = false)
+@Database(entities = Product.class,version = 3,exportSchema = false)
 public abstract class DatabaseInitializer extends RoomDatabase {
     public abstract ProductDAO productDAO();
 

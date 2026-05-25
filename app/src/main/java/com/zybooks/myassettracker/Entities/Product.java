@@ -11,13 +11,13 @@ public class Product {
 
     String name;
 
-    Float price;
+    String price;
 
     int quantity;
 
     String location;
     //---------------------------------------- Constructor---------------------------------
-    public Product(int id, String name, Float price, int quantity, String location) {
+    public Product(int id, String name, String price, int quantity, String location) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -42,11 +42,11 @@ public class Product {
         this.name = name;
     }
 
-    public Float getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 

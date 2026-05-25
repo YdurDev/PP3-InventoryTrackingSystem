@@ -20,6 +20,9 @@ public interface ProductDAO {
     @Query("SELECT * FROM PRODUCTS")
     List<Product> getAllProducts();
 
+    @Query("SELECT COUNT(*) FROM PRODUCTS")
+    int getProductCount();
+
     @Query("SELECT * FROM PRODUCTS WHERE :name = name")
     Product getProduct(String name);
 
