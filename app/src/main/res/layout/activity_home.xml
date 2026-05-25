@@ -108,7 +108,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="20dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -138,7 +139,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="20dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -168,7 +170,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="20dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -198,7 +201,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="20dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </GridLayout>

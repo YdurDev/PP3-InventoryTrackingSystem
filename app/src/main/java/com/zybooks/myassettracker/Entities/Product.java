@@ -7,15 +7,15 @@ import androidx.room.PrimaryKey;
 public class Product {
 
     @PrimaryKey(autoGenerate = true)
-    int id;
+    private int id;
 
-    String name;
+    private String name;
 
-    String price;
+    private String price;
 
-    int quantity;
+    private int quantity;
 
-    String location;
+    private String location;
     //---------------------------------------- Constructor---------------------------------
     public Product(int id, String name, String price, int quantity, String location) {
         this.id = id;
