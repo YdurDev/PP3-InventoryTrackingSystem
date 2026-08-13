@@ -6,12 +6,15 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.zybooks.myassettracker.DAO.ActivityDAO;
 import com.zybooks.myassettracker.DAO.ProductDAO;
 import com.zybooks.myassettracker.Entities.Product;
+import com.zybooks.myassettracker.Entities.Activity;
 
-@Database(entities = Product.class,version = 1,exportSchema = false)
+@Database(entities = {Product.class,Activity.class},version = 1,exportSchema = false)
 public abstract class DatabaseInitializer extends RoomDatabase {
     public abstract ProductDAO productDAO();
+    public abstract ActivityDAO activityDAO();
 
     private static volatile DatabaseInitializer INSTANCE;
 
